@@ -31,12 +31,13 @@ public class Main {
         if (n==1) return 1;
         return n*n+sum1(n-1);
     }
-
+    // O(n). Because the number of function calls is equal to the size of the input data
 
     public static int sum2(int n,int arr[]){
         if (n==1) return arr[0];
         return arr[n-1]+sum2(n-1,arr);
     }
+    // O(n). Because the number of function calls is equal to the size of the input data
 
     public static int sum3(int b, int n){
         if (n==0) return 1;
@@ -46,6 +47,8 @@ public class Main {
         if  (n==0) return 1;
         return b*pow(b,n-1);
     }
+    //O(n^2). Because in each sum3 computes pow. So n*n=O(n^2)
+
 
     public static void reversePrint(int N){
         Scanner sc = new Scanner(System.in);
@@ -57,4 +60,5 @@ public class Main {
         reverse(N-1,sc);
         System.out.print(n+" ");
     }
+    //O(n). Because function reads and prints each number once.
 }
